@@ -20,7 +20,10 @@ function computerPlay() { // Outputs computer's move (ROCK, PAPER, or SCISSORS) 
 }
 
 function playRound(playerSelection, computerSelection) { // Outputs message displaying results of game
-    
+
+    // Error handling: capitalize user input
+    playerSelection = playerSelection.toUpperCase();
+
     // Potential output messages - win, lose, or tie
     let userWins = `You win! ${playerSelection} beats ${computerSelection}.`;
     let compWins = `You lose. ${computerSelection} beats ${playerSelection}.`;
