@@ -46,3 +46,17 @@ function playRound(playerSelection, computerSelection) { // Outputs message disp
         return (playerSelection === "SCISSORS") ? userWins : compWins;
     }
 }
+
+function game() { // Play 5 games
+
+    for (let i = 0; i < 5; i++) {
+        // Prompt user for move
+        let player = prompt("Your move: ");
+        // Generate computer's move
+        let computer = computerPlay();
+        // Log result of each round
+        console.log(playRound(player, computer));
+    }
+}
+
+game();
